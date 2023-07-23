@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <style>
+        body{
+            background-image: url(images/galax.jpg);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: 100%;
+
+            overflow: hidden;
+        }
+        #scene{
+            width: 100%;
+            height: 1000px;
+            overflow: hidden;
+          
+        }
+        #scene img{
+            position: absolute;
+        }
+        #jup{
+            margin-left: 0px;
+            width: 300px;
+            top: 250px;
+            left: 100px;
+        }
+        #moon{
+            width: 200px;
+            left: 1200px;
+            top: 300px;
+        }
+        #mars{
+            width: 150px;
+            top: 100px;
+            left: 600px;
+        }
+        #ear{
+            width: 250px;
+            top: 400px;
+            left: 700px;
+        }
+    </style>
+</head>
+<body>
+        <div id="scene">
+            <div data-depth="0.2"><img id="jup" src="images/Jupiter-PNG-Isolated-File.png" alt="" ></div>
+            <div data-depth="0.8"><img id="moon" src="images/Moon-PNG-Photos.png" alt=""></div>
+            <div data-depth="1"><img id="mars" src="images/mars-transparent-png-stickpng-0.png" alt=""></div>
+            <div data-depth="0.5"><img id="ear" src="images/7-2-earth-png-pic.png" alt=""></div>
+        </div>
+                    
+<script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+</script>
+</body>
+</html>
